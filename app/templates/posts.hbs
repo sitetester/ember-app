@@ -1,0 +1,13 @@
+{{#if showAddNewPostLink }}
+  {{#link-to 'posts.new' class="button" }}
+    New Post
+  {{/link-to}}
+{{/if}}
+
+<div class="new-post">
+  {{outlet}}
+</div>
+
+{{#each model as |postItem|}}
+  {{post-listing post=postItem}}
+{{/each}}

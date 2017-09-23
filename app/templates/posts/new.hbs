@@ -1,0 +1,15 @@
+<form {{action 'doAddNewPost' on='submit'}}>
+
+  <label for="post-input-title">Title:</label>
+  {{input id='post-input-title' placeholder='Enter Title' value=title}}
+
+  <label for="post-input-body">Body:</label>
+   {{textarea id='post-input-body' value=body}}
+
+  <button type="submit">Add New Post</button>
+
+  {{#if errorMessage}}
+    <span class="error">{{errorMessage}}</span>
+  {{/if}}
+
+</form>
